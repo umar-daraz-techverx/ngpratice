@@ -1,0 +1,15 @@
+
+<div class="container col-lg-6">
+  <form #imageform=ngForm (ngSubmit)="onSubmit(Caption,Image)">
+    <div>
+      <label>caption</label>
+      <input class="form-control" type="text" #Caption ngModel name="Caption" />
+    </div>
+    <div>
+      <input  class="form-control" type="file" #Image accept="image" (change)="handlefile($event.target.files)" />
+    </div>
+    <button  class="btn btn-default" type="submit">Submit</button>
+  </form>
+</div>
+
+

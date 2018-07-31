@@ -1,0 +1,22 @@
+<h1>Employee</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<!--<p *ngIf="!emp"><em>Loading...</em></p>-->
+
+<table class='table'>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+   
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let e of emp">
+    <td>{{ e.id }}</td>
+    <td>{{ e.name }}</td>
+  
+  </tr>
+  </tbody>
+</table>

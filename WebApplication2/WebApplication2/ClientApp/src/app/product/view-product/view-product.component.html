@@ -1,0 +1,45 @@
+
+<div class="card" ng-if="product!=null">
+  
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+          
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active" id="pic-1"><img [src]="product.imageUrl" /></div>
+          </div>
+          <ul class="preview-thumbnail nav nav-tabs">
+            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img [src]="product.imageUrl" /></a></li>
+            <li><a data-target="#pic-2" data-toggle="tab"><img [src]="product.imageUrl" /></a></li>
+            <li><a data-target="#pic-3" data-toggle="tab"><img [src]="product.imageUrl" /></a></li>
+            <li><a data-target="#pic-4" data-toggle="tab"><img [src]="product.imageUrl"/></a></li>
+            <li><a data-target="#pic-5" data-toggle="tab"><img [src]="product.imageUrl" /></a></li>
+          </ul>
+        </div>
+        <div class="details col-md-6">
+          <h3 class="product-title">{{product.title}}</h3>
+          <div class="rating">
+            <div class="stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <span class="review-no">41 reviews</span>
+          </div>
+          <p class="product-description">{{product.discraption}}</p>
+          <div class="action">
+              <a [routerLink]='["/createproduct"]'>	<button class="add-to-cart btn btn-primary" >Create</button></a>
+            <button class="add-to-cart btn btn-primary" type="button">Edit</button>
+            <button class="add-to-cart btn btn-default" (click)="DeleteProduct()" type="button">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+   
+  </div>
+  <div class="right">
+      <a class="btn btn-default" [routerLink]='["/product"]'>back</a>
+  </div>
